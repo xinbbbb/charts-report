@@ -23,7 +23,7 @@ export default function Index() {
         </DCard.Body>
         <DCard.Footer>
           <span>昨日销售额</span>
-          <span className="emphasis">￥ 30,000,000</span>
+          <span className="emphasis">￥ 30,100,000</span>
         </DCard.Footer>
       </DCard>
     </div>

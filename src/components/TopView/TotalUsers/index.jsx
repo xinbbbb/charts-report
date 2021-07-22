@@ -1,5 +1,5 @@
 import React from 'react'
-import { AreaChart, Label, XAxis, YAxis, Tooltip, Area } from 'recharts'
+import { AreaChart, Tooltip, Area } from 'recharts'
 import DCard from '../../DCard/DCard'
 import './index.css'
 
