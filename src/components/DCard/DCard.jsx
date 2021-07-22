@@ -15,10 +15,12 @@ const Footer = () => null
 
 const DCard = ({ title, value, children }) => {
   const classes = useStyles();
+  let body, footer
+  if(Array.isArray(children)) {
+    body = children.find(el => el.type === Body)
+    footer = children.find(el => el.type === Footer)
+  }
 
-  const body = children.find(el => el.type === Body)
-  const footer = children.find(el => el.type === Footer)
- 
   return (
     <div>
       <Card className={classes.root}>
