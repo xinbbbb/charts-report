@@ -10,7 +10,7 @@ const data = [
   { name: 'cars', uv: 2800, pv: 2800, amt: 4000, bmk: 1500, time: 4, uvError: 100, pvError: 30 },
   { name: 'bridge', uv: 2800, pv: 3800, amt: 4000, bmk: 1500, time: 4, uvError: 100, pvError: 30 },
   { name: 'digital', uv: 2800, pv: 4800, amt: 4000, bmk: 1500, time: 4, uvError: 100, pvError: 30 },
-  { name: 'digital', uv: 2800, pv: 3500, amt: 4000, bmk: 1500, time: 4, uvError: 100, pvError: 30 },
+  { name: 'digital', uv: 2800, pv: 3500, amt: 4000, bmk: 1500, time: 4, uvError: 100, pvError: 30 }
 ];
 
 export default function Index() {
