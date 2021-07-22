@@ -1,0 +1,15 @@
+.total-users-footer {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  color: #666;
+}
+.emphasis {
+  margin-left: 5px;
+}
+.increase {
+  margin-bottom: 6px;
+}
+.decrease {
+  margin-top: 0;
+}
