@@ -1,0 +1,14 @@
+.compare-wrapper {
+  font-size: 12px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.compare-wrapper .compare {
+  margin-top: 5px;
+  color: #666;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
