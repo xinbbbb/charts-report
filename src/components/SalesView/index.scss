@@ -3,14 +3,9 @@
   .menu-wrapper {
     position: relative;
     display: flex;
-    .sales-view-el-menu {
-      width: 100%;
-      padding-left: 20px;
-      .el-menu-item {
-        height: 50px;
-        line-height: 50px;
-        margin: 0 20px;
-      }
+    border-bottom: 1px solid #e6e6e6;
+    .sales-view-menu {
+      padding-left: 20px;      
     }
     .menu-right {
       position: absolute;
@@ -21,14 +16,14 @@
       align-items: center;
       justify-content: flex-end;
       .sales-view-date-picker {
-        margin-left: 20px;
+        margin-left: 30px;
       }
     }
   }
   .sales-view-chart-wrapper {
     display: flex;
     height: 270px;
-    .echarts {
+    .charts {
       flex: 0 0 70%;
       width: 70%;
       height: 100%;

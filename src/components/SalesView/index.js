@@ -1,18 +1,23 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types';
 // import SwipeableViews from 'react-swipeable-views'
-import { makeStyles, useTheme } from '@material-ui/core/styles'
+import { useTheme } from '@material-ui/core/styles'
 import Paper from '@material-ui/core/Paper'
 import Tabs from '@material-ui/core/Tabs'
 import Tab from '@material-ui/core/Tab'
-import Typography from '@material-ui/core/Typography';
-import Box from '@material-ui/core/Box';
+import ButtonGroup from '@material-ui/core/ButtonGroup'
+import Button from '@material-ui/core/Button'
+import Box from '@material-ui/core/Box'
+
 
 import './index.scss'
-import ChartOne from './chartOne'
+import ChartSale from './chartSale'
+import ChartVisit from './chartVisit'
+import UIPickers from '../DPickers'
+import RankList from './rankList'
 
 function TabPanel(props) {
-  const { children, value, index, ...other } = props;
+  const { children, value, index, ...other } = props
 
   return (
     <div
@@ -28,14 +33,14 @@ function TabPanel(props) {
         </Box>
       )}
     </div>
-  );
+  )
 }
 
 TabPanel.propTypes = {
   children: PropTypes.node,
   index: PropTypes.any.isRequired,
   value: PropTypes.any.isRequired,
-};
+}
 
 function a11yProps(index) {
   return {
@@ -44,10 +49,9 @@ function a11yProps(index) {
   };
 }
 
-
 export default function Index() {
 
-  const theme = useTheme();
+  // const theme = useTheme()
 
   const [value, setValue] = useState(0);
 
@@ -59,26 +63,36 @@ export default function Index() {
     <Paper className='sales-view'>
       <div className='menu-wrapper'>
         <Tabs
+          className='sales-view-menu'
             value={value}
             onChange={handleChange}
             indicatorColor="primary"
             textColor="primary"
             variant="fullWidth"
-            aria-label="full width tabs example"
         >
           <Tab label="销售额" {...a11yProps(0)} />
           <Tab label="访问量" {...a11yProps(1)} />
         </Tabs>
-        
+        <div className='menu-right'>
+          <ButtonGroup size="small" color="primary" aria-label="outlined primary button group">
+            <Button active>Today</Button>
+            <Button>This Week</Button>
+            <Button>This Month</Button>
+            <Button>This Month</Button>
+          </ButtonGroup>
+          <UIPickers />
+        </div>
       </div>
       <div className='sales-view-chart-wrapper'
       >
-        <TabPanel value={value} index={0}>
-          <ChartOne />
+        <TabPanel className='charts' value={value} index={0}>
+          <ChartSale />
         </TabPanel>
-        <TabPanel value={value} index={1}>
-          Item Two
+        <TabPanel className='charts' value={value} index={1}>
+          <ChartVisit />
         </TabPanel>
+        <RankList/>
+
       </div>
     </Paper>
   )
