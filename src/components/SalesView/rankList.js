@@ -27,6 +27,11 @@ export default function RankList() {
       no: 5,
       name: '必胜客',
       money: 4165.6,
+    },
+    {
+      no: 6,
+      name: 'Korea fried chicken',
+      money: 7165.6,
     }
   ]
 
