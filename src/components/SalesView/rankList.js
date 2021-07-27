@@ -56,15 +56,6 @@ export default function RankList() {
              )
           })
         }
-        {/* <div
-          className="list-item flex-hc"
-          v-for="item in rankDataList"
-          :key="item.no"
-        >
-          <div :className="['list-item-no', 'flex-hc', 'flex-ws', +item.no < 4 ? 'top-number' : '']">{{ item.no }}</div>
-          <div className="list-item-name">{{ item.name }}</div>
-          <div className="list-item-money flex-1">{{ item.money }}</div>
-        </div> */}
       </div>
     </div>
   )
