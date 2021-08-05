@@ -1,5 +1,5 @@
 import TopView from './components/TopView'
-import SalesView from './components/SalesView'
+import SalesView from './components/SalesView/index'
 
 import './App.css'
 

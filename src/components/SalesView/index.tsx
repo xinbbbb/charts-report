@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 // import SwipeableViews from 'react-swipeable-views'
 import { useTheme } from '@material-ui/core/styles'
 import Paper from '@material-ui/core/Paper'
@@ -16,7 +16,14 @@ import ChartVisit from './chartVisit'
 import UIPickers from '../DPickers'
 import RankList from './rankList'
 
-function TabPanel(props) {
+interface PropTypes {
+  className: string;
+  children?: any;
+  index: any;
+  value: any;
+}
+
+function TabPanel(props: PropTypes) {
   const { children, value, index, ...other } = props
 
   return (
@@ -36,13 +43,7 @@ function TabPanel(props) {
   )
 }
 
-TabPanel.propTypes = {
-  children: PropTypes.node,
-  index: PropTypes.any.isRequired,
-  value: PropTypes.any.isRequired,
-}
-
-function a11yProps(index) {
+function a11yProps(index: number) {
   return {
     id: `full-width-tab-${index}`,
     'aria-controls': `full-width-tabpanel-${index}`,
@@ -55,7 +56,7 @@ export default function Index() {
 
   const [value, setValue] = useState(0);
 
-  const handleChange = (event, newValue) => {
+  const handleChange = (event: any, newValue: number) => {
     setValue(newValue);
   }
 
@@ -75,7 +76,7 @@ export default function Index() {
         </Tabs>
         <div className='menu-right'>
           <ButtonGroup size="small" color="primary" aria-label="outlined primary button group">
-            <Button active>Today</Button>
+            <Button>Today</Button>
             <Button>This Week</Button>
             <Button>This Month</Button>
             <Button>This Month</Button>

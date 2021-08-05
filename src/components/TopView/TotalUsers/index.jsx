@@ -1,4 +1,3 @@
-import React from 'react'
 import { AreaChart, Tooltip, Area } from 'recharts'
 import DCard from '../../DCard/DCard'
 import './index.css'
